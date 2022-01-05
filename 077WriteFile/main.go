@@ -23,7 +23,7 @@ func main() {
 	for i := 1; i <= 4000000000; i++ {
 		n := fmt.Sprintf("%d", randomInt(1000000000, 9000000000, rdx))
 		buf = append(buf, n)
-		if i % 1000000 == 0 {
+		if i % 10000000 == 0 {
 			_, err := file.WriteString(strings.Join(buf, "\n") + "\n")
 			if err != nil {
 				panic(err)
